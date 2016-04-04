@@ -1,3 +1,11 @@
-<h1>{{category.title}}</h1>
+<h1>{{model.title}}</h1>
 <h4>Posts:</h4>
-{{new-post post=post}}
+<!-- {{new-post post=post}} -->
+
+
+
+{{new-post category=model post=post savePost2="savePost3"}}
+{{#each model.posts as |post|}}
+  <li>{{post.title}}</li>
+{{/each}}
+<h3>{{#link-to 'index'}}Back{{/link-to}}</h3>

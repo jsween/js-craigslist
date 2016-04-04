@@ -13,11 +13,17 @@
         </div>
 
         <div class="form-group">
+          <label for="content">Content</label>
+          {{input value=content id="content"}}
+        </div>
+
+
+        <div class="form-group">
           <label for="image">Image</label>
           {{input value=image id="image"}}
         </div>
 
-        <button {{action 'savePost'}}>Save</button>
+        <button {{action 'savePost1'}}>Save</button>
       </form>
     </div>
 {{else}}
