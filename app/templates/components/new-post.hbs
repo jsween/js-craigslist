@@ -1,0 +1,25 @@
+{{#if addNewPost}}
+  <h1>New Post</h1>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="name">Title</label>
+          {{input value=title id="title"}}
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+          {{input value=author id="author"}}
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image</label>
+          {{input value=image id="image"}}
+        </div>
+
+        <button {{action 'savePost'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+  <button class="btn btn-info" {{action 'postFormShow'}}>New City</button>
+{{/if}}
