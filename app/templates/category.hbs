@@ -6,6 +6,6 @@
 
 {{new-post category=model post=post savePost2="savePost3"}}
 {{#each model.posts as |post|}}
-  <li>{{post.title}}</li>
+  <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
 {{/each}}
 <h3>{{#link-to 'index'}}Back{{/link-to}}</h3>
